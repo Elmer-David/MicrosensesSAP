@@ -27,6 +27,7 @@ class CreateClientesTable extends Migration
             $table->string('cargo');
             $table->string('departamento');
             $table->integer('estado')->default(0); //0 usuario anonimo 1 cliente
+            $table->string('sitio');
             $table->timestamps();
         });
     }

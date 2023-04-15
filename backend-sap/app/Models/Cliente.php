@@ -12,6 +12,6 @@ class Cliente extends Model
     protected $primaryKey = 'id_cliente';
     protected $fillable = [
         'nombre', 'apellido', 'telefono', 'email', 'contraseña', 'contraseña_confirmed', 
-        'foto_perfil', 'direccion', 'dni', 'cargo', 'departamento' , 'estado',
+        'foto_perfil', 'direccion', 'dni', 'cargo', 'departamento' , 'estado', 'sitio',
     ];
 }
