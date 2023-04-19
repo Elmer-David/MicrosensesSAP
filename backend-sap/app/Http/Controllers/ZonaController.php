@@ -74,7 +74,7 @@ class ZonaController extends Controller
     {
         $zona = Zona::find($id);
         if(!is_null($zona)){
-        $zona->update($zona->all());
+        $zona->update($request->all());
         return $zona;
        }  
     }

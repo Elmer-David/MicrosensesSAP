@@ -14,7 +14,7 @@ class CreatePersonalsTable extends Migration
     public function up()
     {
         Schema::create('personals', function (Blueprint $table) {
-            $table->id('id_personal');
+            $table->id();
             $table->string('nombre');
             $table->string('apellido');
             $table->string('dni');
@@ -26,6 +26,13 @@ class CreatePersonalsTable extends Migration
             $table->string('contraseña_confirmed');
             $table->integer('tipo_usuario')->default(0); //0 administrador, 1 operador, 2 guardia
             $table->timestamps();
+
+            // $table->foreignId('id_horario')
+            //        ->nullable()
+            //        ->constrained('horarios')
+            //        ->cascadeOnUpdate()
+            //        ->nullOnDelete()
+            //        ;
         });
     }
 

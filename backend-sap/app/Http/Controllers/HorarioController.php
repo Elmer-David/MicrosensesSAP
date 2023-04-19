@@ -74,7 +74,7 @@ class HorarioController extends Controller
     {
         $horario = Horario::find($id);
         if(!is_null($horario)){
-        $horario->update($horario->all());
+        $horario->update($request->all());
         return $horario;
        }  
     }

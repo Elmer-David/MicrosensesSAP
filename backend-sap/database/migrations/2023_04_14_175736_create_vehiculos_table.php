@@ -14,12 +14,19 @@ class CreateVehiculosTable extends Migration
     public function up()
     {
         Schema::create('vehiculos', function (Blueprint $table) {
-            $table->id('id_vehiculo');
+            $table->id();
             $table->string('modelo');
             $table->binary('foto');
             $table->string('nro_placa');
             $table->string('descripcion');
             $table->timestamps();
+
+            $table->foreignId('id_cliente')
+                   ->nullable()
+                   ->constrained('clientes')
+                   ->cascadeOnUpdate()
+                   ->nullOnDelete()
+                   ;
         });
     }
 

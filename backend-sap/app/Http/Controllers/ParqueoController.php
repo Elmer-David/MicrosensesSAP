@@ -74,7 +74,7 @@ class ParqueoController extends Controller
     {
         $parqueo = Parqueo::find($id);
         if(!is_null($parqueo)){
-        $parqueo->update($parqueo->all());
+        $parqueo->update($request->all());
         return $parqueo;
        }  
     }

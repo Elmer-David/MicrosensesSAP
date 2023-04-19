@@ -14,7 +14,7 @@ class CreateZonasTable extends Migration
     public function up()
     {
         Schema::create('zonas', function (Blueprint $table) {
-            $table->id('id_zona');
+            $table->id();
             $table->string('nombre');
             $table->integer('nro_sitios');
             $table->string('sitios');

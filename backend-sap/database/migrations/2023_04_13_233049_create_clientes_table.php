@@ -14,7 +14,7 @@ class CreateClientesTable extends Migration
     public function up()
     {
         Schema::create('clientes', function (Blueprint $table) {
-            $table->id('id_cliente');
+            $table->id();
             $table->string('nombre');
             $table->string('apellido');
             $table->string('telefono');
@@ -29,6 +29,13 @@ class CreateClientesTable extends Migration
             $table->integer('estado')->default(0); //0 usuario anonimo 1 cliente
             $table->string('sitio');
             $table->timestamps();
+
+            // $table->foreignId('id_parqueo')
+            //        ->nullable()
+            //        ->constrained('parqueos')
+            //        ->cascadeOnUpdate()
+            //        ->nullOnDelete()
+            //        ;
         });
     }
 

@@ -9,7 +9,7 @@ class Zona extends Model
 {
     use HasFactory;
     protected $table = 'zonas';
-    protected $primaryKey = 'id_zona';
+    protected $primaryKey = 'id';
     protected $fillable = [
         'nombre', 'nro_sitios', 'sitios', 'direccion', 'imagen', 'descripcion',
     ];

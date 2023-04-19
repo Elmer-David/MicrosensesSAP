@@ -14,7 +14,7 @@ class CreateParqueosTable extends Migration
     public function up()
     {
         Schema::create('parqueos', function (Blueprint $table) {
-            $table->id('id_parqueo');
+            $table->id();
             $table->string('nombre');
             $table->decimal('tarifa_anual');
             $table->decimal('tarifa_mensual');
