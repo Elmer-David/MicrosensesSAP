@@ -16,7 +16,7 @@ class Cliente extends Model
     ];
 
     public function vehiculos(){
-        return $this->hasMany(Vehiculo::class,'id_vehiculo');
+        return $this->hasMany(Vehiculo::class,'id');
     }
     // public function parqueos() {
     //     return $this->belongsTo(Parqueo::class,'id_parqueo');

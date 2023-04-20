@@ -14,7 +14,7 @@ class Horario extends Model
         'nombre', 'inicio_turno', 'salida_turno', 
     ];
 
-    // public function personals(){
-    //     return $this->hasMany(Personal::class,'id_personal');
-    // }
+    public function personals(){
+        return $this->hasMany(Personal::class,'id');
+    }
 }
